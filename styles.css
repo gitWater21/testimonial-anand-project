@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,600;1,500&family=Epilogue:wght@500;700&family=Poppins:wght@500&display=swap');
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ /* border: 1px solid red; */
+ font-family: "Barlow Semi Condensed", sans-serif;
+}
+:root{
+ --moderate-violet: hsl(263, 55%, 52%);
+ --very-dark-grayish-blue: hsl(217, 19%, 35%);
+ --very-dark-blackish-blue: hsl(219, 29%, 14%);
+ --white: hsl(0, 0%, 100%);
+
+
+
+--light-gray: hsl(0, 0%, 81%);
+--light-grayish-blue: hsl(210, 46%, 95%);
+}
+html, body{
+ width: 100%;
+ height: 100%;
+}
+body{
+ background-color: var(--light-grayish-blue);
+}
+.container{
+ height: 100%;
+ /* border: 3px solid green; */
+
+ display: grid;
+ grid-template-columns: 80%;
+ grid-template-rows: 75%;
+ justify-content: center;
+ align-content: center;
+}
+.wrapper{
+ /* background-color: gold; */
+ 
+display: grid;
+grid-template-columns: repeat(4, 25%);
+grid-template-rows: repeat(2, 50%);
+gap: 15px;
+}
+
+.box{
+ background-color: #fff;
+ border-radius: 15px;
+ padding: 1em;
+
+}
+
+.box1{
+ grid-column: 1/3;
+ background-color: var(--moderate-violet);
+ background-image: url('./bg-pattern-quotation.svg');
+ background-repeat: no-repeat;
+ background-position: 85% 0%;
+ 
+}
+.box3{
+ /* background-color: skyblue; */
+ grid-row: span 2;
+}
+.box5{
+ grid-column: 2/4;
+}
+.w-name{
+ color: var(--white);
+}
+.b-name{
+ color: var(--very-dark-blackish-blue);
+}
+small{
+ color: var(--light-gray);
+}
+img{
+ width: 50px;
+ height: 50px;
+ border-radius: 50%;
+ border: 3px solid hsl(265, 66%, 86%);
+
+}
+
+.box .inf-b{
+ color: var(--white);
+ font-size: 22px;
+ line-height: 22px;
+ 
+}
+
+.persion-box{
+ display: flex;
+ align-items: center;
+ /* padding: 1em; */
+ gap: 9px;
+}
+
+.persion-box .inf-b, p{
+ margin-block: 4%;
+}
+
+.text{
+ color: var(--light-gray);
+ line-height: 22px;
+}
+
+.box2{
+ background-color: var(--very-dark-grayish-blue);
+}
+.box5{
+ background-color: var(--very-dark-blackish-blue);
+}
+
+.inf-b-b{
+ color: var(--very-dark-grayish-blue);
+}
+.persion-box .inf-b-b, p{
+ margin-block: 6%;
+}
+.text-b{
+ color: gray;
+ line-height: 25px;
+}
+ 
+@media (width < 440px) {
+ .wrapper{
+ /* background-color: gold; */
+ 
+display: grid;
+grid-template-columns: 100%;
+grid-template-rows: repeat(5, 1fr);
+gap: 15px;
+}
+.box1{
+ grid-column: 1/2;
+ }
+ .box3{
+ /* background-color: skyblue; */
+ grid-row: 5/6;
+ grid-column: 1/2;
+}
+.box5{
+ grid-column: 1/2;
+}
+}
